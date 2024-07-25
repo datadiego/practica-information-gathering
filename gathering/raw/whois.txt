@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.19.25-185-g392e7199df2-1-Debian <<>> abb.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15464
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1220
+; COOKIE: c85f23b9d541f0fd862929eb66a28aea48db4bcc067174a0 (good)
+;; QUESTION SECTION:
+;abb.com.			IN	A
+
+;; ANSWER SECTION:
+abb.com.		213	IN	A	52.30.171.72
+
+;; Query time: 8 msec
+;; SERVER: 192.168.0.1#53(192.168.0.1) (UDP)
+;; WHEN: Thu Jul 25 17:27:06 UTC 2024
+;; MSG SIZE  rcvd: 80
+
