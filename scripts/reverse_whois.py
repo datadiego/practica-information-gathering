@@ -3,11 +3,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import sys
 
-busqueda = input("Introduce la empresa a buscar: ")
+if len(sys.argv) != 2:
+    print('Fallo en la ejecución. Debe ingresar un dominio a buscar.')
+    sys.exit(1)
 
-# Inicializa el navegador
+busqueda = sys.argv[1]
+
+# Inicializa el navegador sin abrir una ventana
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+driver = webdriver.Chrome(options=options)
 driver = webdriver.Chrome()
+
+# do not open a window
+
 
 try:
     # Navega a la página web
@@ -23,11 +34,7 @@ try:
 
     # Imprime el HTML completo de la página
     html = driver.page_source
-    with open(f'{busqueda}.html', 'w') as f:
-        f.write(html)
-    print('HTML guardado con éxito')
-    with open('temp_nombre', 'w') as f:
-        f.write(busqueda)
+    print(html)
 
 finally:
     # Cierra el navegador

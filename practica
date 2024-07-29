@@ -1,0 +1,25 @@
+# Practica Information Gathering
+
+## Objetivo
+
+El objetivo del reconocimiento es [ABB Information Systems Ltd](https://hackerone.com/abb?type=team), una corporación multinacional de origen sueco-suiza y con sede en Zurich.
+
+Se especializa en robótica, automatización, generación de energía eléctrica, equipamientos industriales y otras tecnologías de ingeniería.
+
+El dominio elegido es el principal: `*.abb.com`.
+
+## Proceso
+
+### Obtener IP del dominio
+
+La IP del dominio `abb.com` es 
+
+Podemos obtenerla con `dig abb.com`.
+
+Copié la IP al archivo `ip-abb.com`
+
+### Obtener ASN
+
+El ASN es `AS16509`
+
+No pude obtenerla mediante `whois <ip>`, pero si en [esta herramienta en linea](https://bgp.he.net/dns/abb.com#_ipinfo)
