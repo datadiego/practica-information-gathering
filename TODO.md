@@ -1,0 +1,7 @@
+- [x] Crear estructura de archivos y carpetas al ejecutar el script
+- [x] Conseguir IPs publicas
+- [x] Validar listas de servidores DNS
+- [x] Encontrar horizontalmente con reverse whois dominios relacionados
+- [] Conseguir ASN
+- [] Conseguir rangos de IPs
+- [] Conseguir subdominios

@@ -1,2 +1,0 @@
-Este TLD no dispone de servidor whois, pero puede acceder a la base de datos de whois en
-https://www.nic.es/
