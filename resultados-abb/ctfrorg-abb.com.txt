@@ -1,0 +1,2 @@
+*.it.abb.com
+gwy5.ch.abb.com

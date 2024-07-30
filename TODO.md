@@ -2,6 +2,10 @@
 - [x] Conseguir IPs publicas
 - [x] Validar listas de servidores DNS
 - [x] Encontrar horizontalmente con reverse whois dominios relacionados
-- [] Conseguir ASN
+- [x] Conseguir ASN
+- [x] whois
+- [] Sacar NetRange y CIDR desde whois
+- [] nic.es 
+- [] Limpiar ASN
 - [] Conseguir rangos de IPs
 - [] Conseguir subdominios
