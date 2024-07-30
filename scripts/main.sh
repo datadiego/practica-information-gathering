@@ -66,6 +66,36 @@ python scripts/reverse_whois.py $domain > $current_search_folder/raw/reverse_who
 cat $current_search_folder/raw/reverse_whois.txt | grep -Eho '<td>(([[:alpha:]](-?[[:alnum:]])*)\.)*[[:alpha:]](-?[[:alnum:]])+\.[[:alpha:]]{2,}</td>' | grep -Eho '(([[:alpha:]](-?[[:alnum:]])*)\.)*[[:alpha:]](-?[[:alnum:]])+\.[[:alpha:]]{2,}' > $current_search_folder/reverse_whois.txt
 
 
+# TODO
+
+# analyticsrelationships
+
+analyticsrelationships --url $domain > $current_search_folder/raw/analyticsrelationships.txt
+
+# Gau
+
+gau --threads 10 $domain > $current_search_folder/raw/gau.txt
+
+# CTFR
+
+ctfr -d $domain > $current_search_folder/raw/ctfr.txt
+
+# CTFORG
+
+ctfrorg -d $domain > $current_search_folder/raw/ctfrorg.txt
+
+# Katana
+
+echo $domain | katana -silent -jc -o $current_search_folder/raw/katana.txt -kf robotstxt,sitemapxml
+
+# Amass
+
+amass enum -d $domain -max-dns-queries 10 -o $current_search_folder/raw/amass.txt
+
+# Cero
+
+cero -d $domain -o $current_search_folder/raw/cero.txt
+
 echo "Search completed for $domain"
 
 ls -l $current_search_folder
