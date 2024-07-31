@@ -28,24 +28,24 @@ cat $current_search_folder/public-ip.txt | xargs -n 1 whois > $current_search_fo
 cat $current_search_folder/raw/whois.txt | grep "AS" > $current_search_folder/asn.txt
 
 # check if ASN.txt is 0 bytes
-if [ ! -s $current_search_folder/asn.txt ]; then
-    echo "No he encontrado ASN para $domain"
-    rm $current_search_folder/asn.txt
-    exit 1
-fi
+#if [ ! -s $current_search_folder/asn.txt ]; then
+#    echo "No he encontrado ASN para $domain"
+#    rm $current_search_folder/asn.txt
+#    exit 1
+#fi
 
-if [ -s $current_search_folder/asn.txt ]; then
-    echo "ASN encontrado"
-    # extraer ASN
-    echo "----"
-    cat $current_search_folder/asn.txt
-    echo "----"
-    echo "Editar a mano?"
-    read -p "Editar ASN? (y/n): " edit_asn
-    if [ $edit_asn = "y" ]; then
-        nano $current_search_folder/asn.txt
-    fi
-fi
+#if [ -s $current_search_folder/asn.txt ]; then
+#    echo "ASN encontrado"
+#    # extraer ASN
+#    echo "----"
+#    cat $current_search_folder/asn.txt
+#    echo "----"
+#    echo "Editar a mano?"
+#    read -p "Editar ASN? (y/n): " edit_asn
+#    if [ $edit_asn = "y" ]; then
+#        nano $current_search_folder/asn.txt
+#    fi
+#fi
 
 echo "Obteniendo información de los ASN"
 #rangos de IP de los ASN
@@ -55,8 +55,6 @@ echo "Obteniendo información de los ASN"
 whois -b $(cat $current_search_folder/public-ip.txt) > $current_search_folder/raw/ripe.txt
 
 #rangos desde RADB
-
-
 
 
 # Descubrir dominios relacionados
