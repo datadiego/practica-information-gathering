@@ -2,6 +2,7 @@
 
 domain=$1
 date=date=$(date +%Y-%m-%d)
+current_search_folder=domains/$domain/$date
 
 # analyticsrelationships
 analyticsrelationships --url $domain > $current_search_folder/raw/analyticsrelationships.txt
