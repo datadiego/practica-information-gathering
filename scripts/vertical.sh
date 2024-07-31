@@ -1,8 +1,7 @@
 #!/bin/bash
 
 domain=$1
-date=date=$(date +%Y-%m-%d)
-current_search_folder=domains/$domain/$date
+current_search_folder=$2
 
 # analyticsrelationships
 analyticsrelationships --url $domain > $current_search_folder/raw/analyticsrelationships.txt

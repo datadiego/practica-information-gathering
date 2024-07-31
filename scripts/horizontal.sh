@@ -1,7 +1,7 @@
 #!/bin/bash
 
 domain=$1
-current_search_folder=domains/$domain/$(date +%Y-%m-%d)
+current_search_folder=$2
 
 dig $domain > $current_search_folder/raw/dig.txt
 dig +short $domain > $current_search_folder/public-ip.txt
